@@ -47,8 +47,8 @@ public class Usuarios implements Serializable {
 	@Column
 	private boolean activo;
 	@ManyToMany(fetch = FetchType.EAGER)
-	@JoinTable(name = "usuarios_roles", joinColumns = { @JoinColumn(name = "username") }, inverseJoinColumns = {
-			@JoinColumn(name = "id_role") })
+	@JoinTable(name = "usuarios_rol", joinColumns = { @JoinColumn(name = "username") }, inverseJoinColumns = {
+			@JoinColumn(name = "id_rol") })
 	@JsonIgnore
 	@JsonManagedReference
 	private Set<Rol> roles = new HashSet<Rol>();

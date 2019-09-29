@@ -16,7 +16,7 @@ import javax.persistence.Table;
  * @author esempere 24/04/2019
  */
 @Entity
-@Table(name = "roles")
+@Table(name = "rol")
 public class Rol  implements Serializable
 	{
 
@@ -25,7 +25,7 @@ public class Rol  implements Serializable
 	private Integer id;
 
 	@Column
-	private String role;
+	private String rol;
 
 	@Column
 	private String nombre;
@@ -56,12 +56,12 @@ public class Rol  implements Serializable
 
 	public String getRole ()
 		{
-		return role;
+		return rol;
 		}
 
-	public void setRole (String role)
+	public void setRole (String rol)
 		{
-		this.role = role;
+		this.rol = rol;
 		}
 
 	public String getNombre ()
