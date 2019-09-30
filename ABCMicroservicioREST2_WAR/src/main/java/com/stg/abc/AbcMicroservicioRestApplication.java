@@ -12,7 +12,7 @@ public class AbcMicroservicioRestApplication extends SpringBootServletInitialize
 	public static void main(String[] args) {
 		SpringApplication.run(AbcMicroservicioRestApplication.class, args);
 	}
-	
+	 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
 		 
