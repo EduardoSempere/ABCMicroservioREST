@@ -8,9 +8,13 @@ import java.util.Optional;
 import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+
+import org.springframework.data.rest.core.annotation.RestResource;
 
 /**
  * @author esempere 24/04/2019
@@ -22,6 +26,7 @@ public class Rol  implements Serializable
 
 	@Id
 	@Column
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 
 	@Column
@@ -31,6 +36,7 @@ public class Rol  implements Serializable
 	private String nombre;
 
 	@ManyToMany(mappedBy = "roles")
+	@RestResource(exported = false)
 	private Set<Usuarios> usuarios;
 
 	@JsonBackReference
